@@ -24,8 +24,52 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section><H1>INTRODUCCIÓN A GIT</H1></section>
-				<section><pre><code>git add</code></pre></section>
+				<section><h1>INTRODUCCIÓN A GIT</h1></section>
+				<section>
+					<h3>INSTALAR GIT</h3>
+					<p style="text-align: left">En sistemas Debian, Ubuntu, Mint:</p>
+					<pre><code>#apt get install git</code></pre>
+				</section>
+				<section>
+					<h2>MANOS A LA OBRA !</h2>
+				</section>
+				<section>
+					<h3> CONFIGURACIÓN </h3>
+					<p style="text-align: left"> Parámetros básicos </p>
+					<pre><code>git config --global user.name "Nombre de usuario"</code></pre>
+					<pre><code>git config --global user.mail "correo@whatever.com"</code></pre>
+					<pre><code> git config --list </code></pre>
+				</section>
+
+				<section>
+					<h2>IT'S ALL ABOUT REPOS </h2>
+				</section>
+
+				<section>
+					<h3>PIMEROS PASOS</h3>
+					<p style="text-align:left"> Iniciar un repositorio </p>
+					<pre><code> git init </code></pre>
+					<p style="text-align:left"> Clonar un repositorio </p>
+					<pre><code> git clone url_repositorio</code></pre>
+				</section>
+
+				<section> 
+					 <h4>Git conoce reconoce el proyecto en el que estás trabajando en función del <span style="color:rgb(230, 247, 79)">lugar</span> donde te encuentres al ejecutar los comandos</h4>
+				</section>
+
+				<section>
+					<h3>FUNCIONAMIENTO DE GIT</h3>
+					<pre><code>git add</code></pre>
+					<pre><code>git commit</code></pre>
+
+					Directorio de trabajo &rarr; INDEX &rarr; HEAD
+				</section>
+
+				<section>
+					<h3> MANTENER NUESTRO REPOSITORIO</h3>
+					<pre><code>git add nombre_archivo</code></pre>
+					<pre><code>git add mi archivo.*</code></pre>
+				</section>
 			</div>
 		</div>
 

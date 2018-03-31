@@ -54,16 +54,29 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  color: #f26968;
+}
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 1.6em; 
+  color: #f26968;
+  border-style: solid;
+  border-width: 0.09em
+}
 
 .reveal h3 {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  color: #f26968;
+}
 
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1.1em; 
+  border-style: dashed ;
+  border-width: 0.05em;
+  color: rgb(79, 125, 247);
+
+}
 
 .reveal h1 {
   text-shadow: none; }
@@ -144,11 +157,11 @@ body {
   width: 90%;
   margin: 20px auto;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 0.65em;
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 0px 6px #351f39; }
 
 .reveal code {
   font-family: 'IBM Plex Mono', monospace;
