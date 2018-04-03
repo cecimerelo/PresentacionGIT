@@ -41,7 +41,9 @@ based on dark.css by Ivan Sagalaev
   color: #8f8f8f;
 }
 
-.hljs-title,
+.hljs-title{
+  color: #dfe2d2;
+}
 .hljs-name,
 .hljs-selector-id,
 .hljs-selector-class,
@@ -56,15 +58,17 @@ based on dark.css by Ivan Sagalaev
   color: #dca3a3;
 }
 
+.hljs-string{
+   color: rgb(28, 233, 182); 
+}
 .hljs-deletion,
-.hljs-string,
 .hljs-built_in,
+.hljs-comment,
 .hljs-builtin-name {
-  color: #f2a830;
+  color: #dfe2d2;
 }
 
 .hljs-addition,
-.hljs-comment,
 .hljs-quote,
 .hljs-meta {
   color: #f2a830;

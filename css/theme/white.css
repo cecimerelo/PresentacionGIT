@@ -18,7 +18,8 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
-  color: #222; }
+  color: rgb(102, 102, 102); 
+}
 
 ::selection {
   color: #fff;
@@ -55,26 +56,26 @@ body {
 
 .reveal h1 {
   font-size: 2.5em;
-  color: #6465a5;
+  color: rgb(66,133,244);
 }
 
 .reveal h2 {
   font-size: 1.6em; 
-  color: #6975a6;
+  color: rgb(79,195,247);
   border-style: solid;
   border-width: 0.09em
 }
 
 .reveal h3 {
   font-size: 1.3em;
-  color: #6975a6;
+  color: rgb(0, 191, 165);
 }
 
 .reveal h4 {
   font-size: 1.1em; 
   border-style: dashed ;
   border-width: 0.05em;
-  color: #f05837;
+  color: rgb(28, 233, 182);
 
 }
 
@@ -89,7 +90,16 @@ body {
   line-height: 1.3; }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img,
+.reveal img{
+    position: absolute;
+    height: auto;
+    width: 0.05px;
+    left:0px;
+    bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .reveal video,
 .reveal iframe {
   max-width: 95%;
@@ -240,8 +250,9 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #222;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  border: none;
+  box-shadow: none;
+ }
 
 .reveal section img.plain {
   border: 0;
