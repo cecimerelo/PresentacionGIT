@@ -79,6 +79,14 @@ body {
 
 }
 
+.reveal h5{
+  font-size:1.3em ;
+  color: rgb(66,133,244) ;
+  border-style: solid ;
+  border-width: thick; 
+
+}
+
 .reveal h1 {
   text-shadow: none; }
 
