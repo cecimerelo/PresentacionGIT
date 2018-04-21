@@ -1,151 +1,192 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>presentacionWTM</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+	<title>presentacionWTM</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				
-				<img src="wtm.png" alt="GDG" style="width:40%">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-				<section>
-					<h1>INTRODUCCIÓN A GIT</h1>
-				
-				</section>
-				<section>
-					<h3>INSTALAR GIT</h3>
-					<p style="text-align: left">En sistemas Debian, Ubuntu, Mint:</p>
-					<pre><code>apt get install git</code></pre>
-				</section>
-				<section>
-					<h2>MANOS A LA OBRA !</h2>
-				</section>
-				<section>
-					<h3> CONFIGURACIÓN </h3>
-					<p style="text-align: left"> Parámetros básicos </p>
-					<pre><code>git config --global user.name "Nombre de usuario"</code></pre>
-					<pre><code>git config --global user.mail "correo@whatever.com"</code></pre>
-					<pre><code>git config --list </code></pre>
-				</section>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
 
-				<section>
-					<h2>IT'S ALL ABOUT REPOS </h2>
-				</section>
+<body>
+	<div class="reveal">
+		<div class="slides">
 
-				<section>
-					<h3>PIMEROS PASOS</h3>
-					<p style="text-align:left"> Inicializar un repositorio </p>
-					<pre><code>git init</code></pre>
-					<p style="text-align:left"> Clonar un repositorio </p>
-					<pre><code>git clone url_repositorio</code></pre>
-				</section>
+			<img src="wtm.png" alt="GDG" style="width:40%">
 
-				<section> 
-					 <h4>
-						Git reconoce el proyecto en el que estás trabajando en función del
-						lugar donde te encuentres al ejecutar los comandos
-					</h4>
-				</section>
+			<section>
+				<h1>INTRODUCCIÓN A GIT</h1>
 
-				<section>
-					<h3>FUNCIONAMIENTO DE GIT</h3>
-					<pre><code>git add</code></pre>
-					<pre><code>git commit</code></pre>
+			</section>
+			<section>
+				<h3>INSTALAR GIT</h3>
+				<p style="text-align: left">En sistemas Debian, Ubuntu, Mint:</p>
+				<pre><code>apt get install git</code></pre>
+			</section>
+			<section>
+				<h2>MANOS A LA OBRA !</h2>
+			</section>
+			<section>
+				<h3> CONFIGURACIÓN </h3>
+				<p style="text-align: left"> Parámetros básicos </p>
+				<pre><code>git config --global user.name "Nombre de usuario"</code></pre>
+				<pre><code>git config --global user.mail "correo@whatever.com"</code></pre>
+				<pre><code>git config --list </code></pre>
+			</section>
 
-					Directorio de trabajo &rarr; INDEX &rarr; HEAD
-				</section>
+			<section>
+				<h2>IT'S ALL ABOUT REPOS </h2>
+			</section>
 
-				<section>
-					<h3> MANTENER LOS ARCHIVOS DE NUESTRO REPOSITORIO</h3>
-					<pre><code>git add nombre_archivo</code></pre>
-					<pre><code>git add mi archivo.*</code></pre>
-					 Eliminar un archivo del repositorio
-					<pre><code>git add -u </code></pre>
-				</section>
+			<section>
+				<h3>PIMEROS PASOS</h3>
+				<p style="text-align:left"> Inicializar un repositorio </p>
+				<pre><code>git init</code></pre>
+				<p style="text-align:left"> Clonar un repositorio </p>
+				<pre><code>git clone url_repositorio</code></pre>
+			</section>
 
-				<section>
-					<h3>MANTENER LOS ARCHIVOS DE NUESTRO REPOSITORIO</h3>
-					<pre><code>git status</code></pre>
-					 INDEX &rarr; HEAD
-					<pre><code>git commit nombre_archivo</code></pre>
-					<pre><code>git commit -m "Comentario de los archivos"</code></pre>
-					<pre><code>git commit -am "Comentario de los archivos"</code></pre>
-				</section>
+			<section>
+				<h4>
+					Git reconoce el proyecto en el que estás trabajando en función del lugar donde te encuentres al ejecutar los comandos
+				</h4>
+			</section>
 
-				<section>
-					<h3> SINCRONIZANDO REPOSITORIOS </h3>
+			<section>
+				<h3>FUNCIONAMIENTO DE GIT</h3>
+				<pre><code>git add</code></pre>
+				<pre><code>git commit</code></pre> Directorio de trabajo &rarr; INDEX &rarr; HEAD
+			</section>
 
-					<pre><code>git remote</code></pre>
-					
-					<pre><code>git remote -v </code></pre>
-					<pre><code>origin git@github.com:cecimerelo/GIT.git (fetch) 
+			<section>
+				<h3> MANTENER LOS ARCHIVOS DE NUESTRO REPOSITORIO</h3>
+				<pre><code>git add nombre_archivo</code></pre>
+				<pre><code>git add mi archivo.*</code></pre> Eliminar un archivo del repositorio
+				<pre><code>git add -u </code></pre>
+			</section>
+
+			<section>
+				<h3>MANTENER LOS ARCHIVOS DE NUESTRO REPOSITORIO</h3>
+				<pre><code>git status</code></pre> INDEX &rarr; HEAD
+				<pre><code>git commit nombre_archivo</code></pre>
+				<pre><code>git commit -m "Comentario de los archivos"</code></pre>
+				<pre><code>git commit -am "Comentario de los archivos"</code></pre>
+			</section>
+
+			<section>
+				<h3> SINCRONIZANDO REPOSITORIOS </h3>
+
+				<pre><code>git remote</code></pre>
+
+				<pre><code>git remote -v </code></pre>
+				<pre><code>origin git@github.com:cecimerelo/GIT.git (fetch) 
 origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
-					
-				</section>
 
-				<section>
-					<h3> SINCRONIZANDO REPOSITORIOS </h3>
-					<p style="text-align:left">Añadir otro repositorio remoto: </p>
-					<pre><code>git remote add ALIAS DIRECCION</code></pre>
-					
-					<p style="text-align:left">Eliminar repositorio remoto:</p>
-					<pre><code>git remote rm NOMBRE</code></pre>
+			</section>
 
-					<p style="text-align:left">Cambiar el nombre:</p>
-					<pre><code>git remote rename NOMBRE_ANTERIOR NOMBRE_NUEVO</code></pre>
-				</section>
+			<section>
+				<h3> SINCRONIZANDO REPOSITORIOS </h3>
+				<p style="text-align:left">Añadir otro repositorio remoto: </p>
+				<pre><code>git remote add ALIAS DIRECCION</code></pre>
 
-				<section>
-					<h3> RECIBIENDO CAMBIOS </h3>
-					<pre><code>git pull REPOSITORIO_REMOTO RAMA</code></pre>
-					git pull = git fetch + git merge
-				</section>
+				<p style="text-align:left">Eliminar repositorio remoto:</p>
+				<pre><code>git remote rm NOMBRE</code></pre>
 
-				<section>
-					<h3> ENVIANDO CAMBIOS </h3>
-					<pre><code>git push REPOSITORIO_REMOTO RAMA</code></pre>
-				</section>
+				<p style="text-align:left">Cambiar el nombre:</p>
+				<pre><code>git remote rename NOMBRE_ANTERIOR NOMBRE_NUEVO</code></pre>
+			</section>
 
-				<section> 
-					<h5>.gitignore</h5>
-				</section>
-			</div>
+			<section>
+				<h3> RECIBIENDO CAMBIOS </h3>
+				<pre><code>git pull REPOSITORIO_REMOTO RAMA</code></pre> git pull = git fetch + git merge
+			</section>
+
+			<section>
+				<h3> ENVIANDO CAMBIOS </h3>
+				<pre><code>git push REPOSITORIO_REMOTO RAMA</code></pre>
+			</section>
+
+			<section>
+				<h5>.gitignore</h5>
+			</section>
+
+			<section>
+				<h3>SOLUCIÓN DE PROBLEMAS CON GIT</h3>
+				<p style="text-align:left">Obtener ayuda:</p>
+				<pre><code>git help</code></pre>
+				<pre><code>git help COMANDO</code></pre>
+			</section>
+
+			<section>
+				<h3>VIENDO EL HISTORIAL</h3>
+				<pre><code>git log</code></pre>
+				<pre><code>git log -n</code></pre>
+				<pre><code>git log -p</code></pre>
+				<pre><code>git log --graph --oneline</code></pre>
+			</section>
+
+			<section>
+				<p style="text-align:left">
+					<font color="#4285f4">commit</font> 1e88b202d2c9baf9ed33d4fd83bf44c6b0af1812</p>
+				<p style="text-align:left">
+					<font color="#4285f4">Author:</font> Cecilia
+					<ceci.merelo@gmail.com>
+				</p>
+				<p style="text-align:left">
+					<font color="#4285f4">Date:</font> Tue Apr 3 17:03:22 2018 +0200</p>
+				<p style="text-align:center">En proceso</p>
+			</section>
+
+			<section>
+				<h3>BORRADO DE ARCHIVOS</h3>
+				<pre><code>git rm NOMBRE_FICHERO</code></pre>
+				<pre><code>git rm --cached NOMBRE_ARCHIVO</code></pre>
+				<pre><code>git reset HEAD NOMBRE_ARCHIVO</code></pre>
+			</section>
+
+			<section>
+				<h3>EN GIT HAY ESPACIO PARA EL ARREPENTIMIENTO</h3>
+				<pre><code>git commit --amend</code></pre>
+				<pre><code>git checkout --NOMBRE_ARCHIVO</code></pre>
+				<pre><code>git reset --hard HASH_COMMIT</code></pre>
+				<pre><code>git show HASH_COMMIT</code></pre>
+				
+			</section>
+
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
