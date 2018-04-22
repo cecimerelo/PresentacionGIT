@@ -34,19 +34,20 @@
 
 			</section>
 			<section>
-				<h3>INSTALAR GIT</h3>
+				<h3>Instalar Git</h3>
 				<p style="text-align: left">En sistemas Debian, Ubuntu, Mint:</p>
-				<pre><code>apt get install git</code></pre>
+				<pre><code>apt-get install git</code></pre>
 			</section>
 			<section>
 				<h2>MANOS A LA OBRA !</h2>
 			</section>
 			<section>
-				<h3> CONFIGURACIÓN </h3>
+				<h3> Configuración </h3>
 				<p style="text-align: left"> Parámetros básicos </p>
 				<pre><code>git config --global user.name "Nombre de usuario"</code></pre>
 				<pre><code>git config --global user.mail "correo@whatever.com"</code></pre>
 				<pre><code>git config --list </code></pre>
+				<pre><code>git config --global color.ui true</code></pre>
 			</section>
 
 			<section>
@@ -54,7 +55,7 @@
 			</section>
 
 			<section>
-				<h3>PIMEROS PASOS</h3>
+				<h3>Primeros pasos</h3>
 				<p style="text-align:left"> Inicializar un repositorio </p>
 				<pre><code>git init</code></pre>
 				<p style="text-align:left"> Clonar un repositorio </p>
@@ -68,39 +69,34 @@
 			</section>
 
 			<section>
-				<h3>FUNCIONAMIENTO DE GIT</h3>
-				<pre><code>git add</code></pre>
-				<pre><code>git commit</code></pre> Directorio de trabajo &rarr; INDEX &rarr; HEAD
-			</section>
-
-			<section>
-				<h3> MANTENER LOS ARCHIVOS DE NUESTRO REPOSITORIO</h3>
+				<h3> Mantener los archivos de nuestro repositorio</h3>
 				<pre><code>git add nombre_archivo</code></pre>
 				<pre><code>git add mi archivo.*</code></pre> Eliminar un archivo del repositorio
 				<pre><code>git add -u </code></pre>
 			</section>
 
 			<section>
-				<h3>MANTENER LOS ARCHIVOS DE NUESTRO REPOSITORIO</h3>
-				<pre><code>git status</code></pre> INDEX &rarr; HEAD
+				<h3> Mantener los archivos de nuestro repositorio</h3>
+				<pre><code>git status</code></pre>
 				<pre><code>git commit nombre_archivo</code></pre>
 				<pre><code>git commit -m "Comentario de los archivos"</code></pre>
 				<pre><code>git commit -am "Comentario de los archivos"</code></pre>
 			</section>
 
 			<section>
-				<h3> SINCRONIZANDO REPOSITORIOS </h3>
-
-				<pre><code>git remote</code></pre>
-
-				<pre><code>git remote -v </code></pre>
-				<pre><code>origin git@github.com:cecimerelo/GIT.git (fetch) 
-origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
-
+				Directorio de trabajo &rarr; INDEX &rarr; HEAD
 			</section>
 
 			<section>
-				<h3> SINCRONIZANDO REPOSITORIOS </h3>
+				<h3> Sincronizando repositorios </h3>
+				<pre><code>git remote</code></pre>
+				<pre><code>git remote -v </code></pre>
+				<pre><code>origin git@github.com:cecimerelo/GIT.git (fetch) 
+origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
+			</section>
+
+			<section>
+				<h3>  Sincronizando repositorios </h3>
 				<p style="text-align:left">Añadir otro repositorio remoto: </p>
 				<pre><code>git remote add ALIAS DIRECCION</code></pre>
 
@@ -112,12 +108,15 @@ origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
 			</section>
 
 			<section>
-				<h3> RECIBIENDO CAMBIOS </h3>
-				<pre><code>git pull REPOSITORIO_REMOTO RAMA</code></pre> git pull = git fetch + git merge
+				<h3> Recibiendo cambios </h3>
+				<pre><code>git pull REPOSITORIO_REMOTO RAMA</code></pre>
+				<pre><code>git pull origin master</code></pre>
+				<pre><code>git pull</code></pre>
+				git pull = git fetch + git merge
 			</section>
 
 			<section>
-				<h3> ENVIANDO CAMBIOS </h3>
+				<h3> Enviando cambios </h3>
 				<pre><code>git push REPOSITORIO_REMOTO RAMA</code></pre>
 			</section>
 
@@ -126,41 +125,38 @@ origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
 			</section>
 
 			<section>
-				<h3>SOLUCIÓN DE PROBLEMAS CON GIT</h3>
+				<h3>Solución de problemas con Git</h3>
 				<p style="text-align:left">Obtener ayuda:</p>
 				<pre><code>git help</code></pre>
 				<pre><code>git help COMANDO</code></pre>
 			</section>
 
 			<section>
-				<h3>VIENDO EL HISTORIAL</h3>
+				<h3>Viendo el historial</h3>
 				<pre><code>git log</code></pre>
-				<pre><code>git log -n</code></pre>
+				<pre><code>git log -4</code></pre>
 				<pre><code>git log -p</code></pre>
 				<pre><code>git log --graph --oneline</code></pre>
 			</section>
 
 			<section>
-				<p style="text-align:left">
-					<font color="#4285f4">commit</font> 1e88b202d2c9baf9ed33d4fd83bf44c6b0af1812</p>
-				<p style="text-align:left">
-					<font color="#4285f4">Author:</font> Cecilia
-					<ceci.merelo@gmail.com>
-				</p>
-				<p style="text-align:left">
-					<font color="#4285f4">Date:</font> Tue Apr 3 17:03:22 2018 +0200</p>
-				<p style="text-align:center">En proceso</p>
+				<pre><code>
+commit 1e88b202d2c9baf9ed33d4fd83bf44c6b0af1812
+Author: Cecilia ceci.merelo@gmail.com
+Date: Tue Apr 3 17:03:22 2018 +0200
+En proceso
+				</pre></code>
 			</section>
 
 			<section>
-				<h3>BORRADO DE ARCHIVOS</h3>
+				<h3>Borrado de archivos</h3>
 				<pre><code>git rm NOMBRE_FICHERO</code></pre>
 				<pre><code>git rm --cached NOMBRE_ARCHIVO</code></pre>
 				<pre><code>git reset HEAD NOMBRE_ARCHIVO</code></pre>
 			</section>
 
 			<section>
-				<h3>EN GIT HAY ESPACIO PARA EL ARREPENTIMIENTO</h3>
+				<h3>Retrocediendo al pasado</h3>
 				<pre><code>git commit --amend</code></pre>
 				<pre><code>git checkout --NOMBRE_ARCHIVO</code></pre>
 				<pre><code>git reset --hard HASH_COMMIT</code></pre>
@@ -168,7 +164,7 @@ origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
 			</section>
 
 			<section>
-				<h3>RAMAS</h3>
+				<h3>Ramas</h3>
 				Es un proyecto diferente
 				
 				<p style="text-align:center">Ramas ligeras: etiquetas</p>
@@ -178,12 +174,19 @@ origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
 			</section>
 
 			<section>
-				<h3>RAMAS</h3>
+				<h3>Ramas</h3>
 				<p style="text-align:center">Ejemplo de flujo</p>
 				<pre><code>git checkout -b NOMBRE_RAMA</code></pre>
+				<p style="text-align:center">Aquí se hacen cosas</p>
 				<pre><code>git git checkout master</code></pre>
 				<pre><code>git merge NOMBRE_RAMA</code></pre>
 				<pre><code>git branch -d NOMBRE_RAMA</code></pre>
+			</section>
+
+			<section>
+				<h2>
+					¿Alguna pregunta?
+				</h2>
 			</section>
 
 		</div>

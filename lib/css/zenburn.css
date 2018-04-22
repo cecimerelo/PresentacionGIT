@@ -24,7 +24,7 @@ based on dark.css by Ivan Sagalaev
 }
 
 .hljs-number {
-  color: #8cd0d3;
+  color:rgb(79,195,247);
 }
 
 .hljs-variable,
@@ -63,10 +63,14 @@ based on dark.css by Ivan Sagalaev
 }
 .hljs-deletion,
 .hljs-built_in,
-.hljs-comment,
 .hljs-builtin-name {
   color: #dfe2d2;
 }
+
+.hljs-comment{
+    color: #f3e96b;
+}
+
 
 .hljs-addition,
 .hljs-quote,
