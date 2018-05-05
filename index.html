@@ -31,13 +31,18 @@
 
 			<section>
 				<h1>INTRODUCCIÓN A GIT</h1>
+
+				<aside class="notes">
+					¿Qué es GIT? -> sistema de control de versiones Por qué usar un sistema de control de versiones, problemas habituales Sistema
+					distribuido, cada programador tiene su propio repositorio
+				</aside>
 			</section>
 
 			<section>
 				<p style="text-align: center">
-					<h5>@cecimerelo
-#WTMGranada2018
-				</h5></p>
+					<h5>@cecimerelo #WTMGranada2018
+					</h5>
+				</p>
 			</section>
 			<section>
 				<h3>Instalar Git</h3>
@@ -54,6 +59,10 @@
 				<pre><code>git config --global user.mail "correo@whatever.com"</code></pre>
 				<pre><code>git config --list </code></pre>
 				<pre><code>git config --global color.ui true</code></pre>
+
+				<aside class="notes">
+					- primero configuramos --global: se aplica a todos los repositorios - cambiar alguno de los datos
+				</aside>
 			</section>
 
 			<section>
@@ -62,10 +71,15 @@
 
 			<section>
 				<h3>Primeros pasos</h3>
-				<p style="text-align:left"> Inicializar un repositorio </p>
+				<p> Inicializar un repositorio </p>
 				<pre><code>git init</code></pre>
-				<p style="text-align:left"> Clonar un repositorio </p>
+				<p> Clonar un repositorio </p>
 				<pre><code>git clone url_repositorio</code></pre>
+
+				<aside class="notes">
+					- qué es un repositorio - .git - remote.origin.url
+				</aside>
+
 			</section>
 
 			<section>
@@ -78,15 +92,45 @@
 				<h3> Mantener los archivos de nuestro repositorio</h3>
 				<pre><code>git add nombre_archivo</code></pre>
 				<pre><code>git add mi archivo.*</code></pre> Eliminar un archivo del repositorio
-				<pre><code>git add -u </code></pre>
+
+				<aside class="notes">
+					- para que git sepa que debe de empezar a tener en cuenta un archivo
+				</aside>
 			</section>
 
 			<section>
-				<h3> Mantener los archivos de nuestro repositorio</h3>
-				<pre><code>git status</code></pre>
-				<pre><code>git commit nombre_archivo</code></pre>
-				<pre><code>git commit -m "Comentario de los archivos"</code></pre>
-				<pre><code>git commit -am "Comentario de los archivos"</code></pre>
+				<section>
+					<h3> Mantener los archivos de nuestro repositorio</h3>
+					<pre><code>git status</code></pre>
+					<pre><code>git commit nombre_archivo</code></pre>
+					<pre><code>git commit -m "Comentario de los archivos"</code></pre>
+					<pre><code>git commit -am "Comentario de los archivos"</code></pre>
+
+					<aside class="notes">
+						<p>- COMMIT envía del INDEX al HEAD </p>
+						<p>- -a: conviene su uso ya que examina todos los ficheros que están siendo
+						seguidos, no sólo los del directorio actual y los que están por debajo</p>
+						<p>- ¿cada cuánto hacer el commit? debe dejar el código en un estado sano. En general
+							no dejar a medias un cambio
+						</p>
+						<p>- debe de hablar de porqués y cómos no de qués</p>
+						<p>- 50 + 72, explicación extendida en las 72</p>
+					</aside>
+				</section>
+				<section>
+					<h6>
+						<p>En la rama master
+							<br> Su rama está actualizada con «origin/master».
+							<br> Cambios no preparados para el commit:</p>
+						<p style="text-indent: 3%">(use «git add
+							<archivo>...» para actualizar lo que se confirmará)</p>
+						<p style="text-indent: 3%">(use «git checkout --
+							<archivo>...» para descartar cambios en el directorio de trabajo)</p>
+						<p style="text-indent: 10%">
+							<font>modificado: index.html</font>
+						</p>
+					</h6>
+				</section>
 			</section>
 
 			<section>
@@ -99,59 +143,107 @@
 				<pre><code>git remote -v </code></pre>
 				<pre><code>origin git@github.com:cecimerelo/GIT.git (fetch) 
 origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
+				<aside class="notes">
+					<p>- git remote los repositorios que tenemos en remoto</p>
+					<p>- recibir(fecth) y enviar(push) los cambios </p>
+				</aside>
 			</section>
 
 			<section>
-				<h3>  Sincronizando repositorios </h3>
-				<p style="text-align:left">Añadir otro repositorio remoto: </p>
+				<h3> Sincronizando repositorios </h3>
+				<p>Añadir otro repositorio remoto: </p>
 				<pre><code>git remote add ALIAS DIRECCION</code></pre>
 
-				<p style="text-align:left">Eliminar repositorio remoto:</p>
+				<p>Eliminar repositorio remoto:</p>
 				<pre><code>git remote rm NOMBRE</code></pre>
 
-				<p style="text-align:left">Cambiar el nombre:</p>
+				<p>Cambiar el nombre:</p>
 				<pre><code>git remote rename NOMBRE_ANTERIOR NOMBRE_NUEVO</code></pre>
+
+				<aside class="notes">
+					<p>- alias es un nombre corto para usar en las instrucciones</p>
+					<p>- git no comprueba si realmente existen los repositoriosque agregas o si tienes permisos de lectura o escritura en ellos.
+						Que estén ahí no significa que puedas usarlos realmente.
+					</p>
+				</aside>
 			</section>
 
 			<section>
 				<h3> Recibiendo cambios </h3>
 				<pre><code>git pull REPOSITORIO_REMOTO RAMA</code></pre>
 				<pre><code>git pull origin master</code></pre>
-				<pre><code>git pull</code></pre>
-				git pull = git fetch + git merge
+				<pre><code>git pull</code></pre> git pull = git fetch + git merge
+				<aside class="notes">
+					<p>- importar cambios desde un repositorio remoto </p>
+					<p>- si el repositorio del que tratas de importar no existe o no tiene permisos de lectura, te dará un mensaje de error.
+					</p>
+				</aside>
 			</section>
 
 			<section>
 				<h3> Enviando cambios </h3>
 				<pre><code>git push REPOSITORIO_REMOTO RAMA</code></pre>
+
+				<aside class="notes">
+					<p>- se recomienda hacer un push por cada commit, por si alguien
+						está modificando el mismo código.
+					</p>
+				</aside>
 			</section>
 
 			<section>
 				<h5>.gitignore</h5>
+				<aside class="notes">
+					<p>- cuando hacemos uso de git add .</p>
+					<p>- debe ubicarse en el directorio raíz del proyecto</p>
+					<p>- podemos usar comodines y otras herramientas </p>
+				</aside>
 			</section>
 
 			<section>
 				<h3>Solución de problemas con Git</h3>
-				<p style="text-align:left">Obtener ayuda:</p>
+				<p>Obtener ayuda:</p>
 				<pre><code>git help</code></pre>
-				<pre><code>git help COMANDO</code></pre>
+				<pre><code>git help commit</code></pre>
 			</section>
 
 			<section>
-				<h3>Viendo el historial</h3>
-				<pre><code>git log</code></pre>
-				<pre><code>git log -4</code></pre>
-				<pre><code>git log -p</code></pre>
-				<pre><code>git log --graph --oneline</code></pre>
+				<section>
+					<h3> ¿Qué he hecho?</h3>
+					<pre><code>git log</code></pre>
+					<pre><code>git log -4</code></pre>
+					<pre><code>git log -p</code></pre>
+					<pre><code>git log --graph --oneline</code></pre>
+					<aside class="notes">
+						<p>- lo primero es un hash unico</p>
+						<p>- nos mostrará todas las entradas</p>
+						<p>- --oneline mostrará una versión resumida, al contrario que -p</p>
+						<p>- git log --graph --oneline commits en versión compacta y dibujando las ramas</p>
+					</aside>
+				</section>
+				<section>
+					<h6>
+						<p>commit 5f45a64a30bc86577ea4de99791e4142b503179e</p>
+						<p>Author: Cecilia
+							<ceci.merelo@gmail.com>
+						</p>
+						<p>Date: Mon Apr 23 10:56:39 2018 +0200</p>
+						<p style="text-indent: 10%"> Últimos retoques: añadida información de contacto y archivo R</p>
+					</h6>
+				</section>
 			</section>
-
-
 
 			<section>
 				<h3>Borrado de archivos</h3>
 				<pre><code>git rm NOMBRE_FICHERO</code></pre>
 				<pre><code>git rm --cached NOMBRE_ARCHIVO</code></pre>
 				<pre><code>git reset HEAD NOMBRE_ARCHIVO</code></pre>
+
+				<aside class="notes">
+					<p>- borra también el archivo del index</p>
+					<p>- --cached: necesitas borrar el archivo del index pero sin borrarlo del directorio de trabajo
+					</p>
+				</aside>
 			</section>
 
 			<section>
@@ -159,28 +251,67 @@ origin git@github.com:cecimerelo/GIT.git (push)</code></pre>
 				<pre><code>git commit --amend</code></pre>
 				<pre><code>git checkout --NOMBRE_ARCHIVO</code></pre>
 				<pre><code>git reset --hard HASH_COMMIT</code></pre>
-				<pre><code>git show HASH_COMMIT</code></pre>
+				<pre><code>git show HASH_COMMIT:ruta/archivo</code></pre>
+
+				<aside class="notes">
+					<p>- --amend : si no has modificado nada en tus archivos esto simplemente te permite reescribir el commit, pero si habías
+						olvidado añadir algo al index lo puedes añadir antes de usar esta orden
+					</p>
+					<p>- --checkout : deshacer cambios en un archivo, para recuperar la versión del HEAD
+					</p>
+					<p>- (3) para recuperar el estado de tu directorio de trabajo tal y como estaba en algún momento del pasado. Deshara los
+						commits posteriores al indicado y traerá a tu directorio de trabajo los archivos tal y como estaban entonces.
+					</p>
+					<p>- usar push antes del reset</p>
+					<p>- usar ramas</p>
+					<p>- (4) cambios que hiciste en un commit</p>
+				</aside>
 			</section>
 
 			<section>
-				<h3>Ramas</h3>
-				Es un proyecto diferente
-				
-				<p style="text-align:center">Ramas ligeras: etiquetas</p>
+				<h3>Buenas prácticas</h3>
+				<p style="text-align: center">No hay reglas de cómo debe de hacerse pero sí de cómo NO debe de hacerse</p>
+				<p style="text-align: center">Ficheros en el directorio principal: INSTALL, .gitignore, LICENSE, makefile ...</p>
+				<aside class="notes">
+					<p>- todo en un único directorio. Cada persona sólo vea los arhivos con los que
+						tiene que trabajar.
+					</p>
+					<p>- incluir en la cabecera en qué paquete se encuentra y su licencia</p>
+					<p>- fuera de los mencionados se intentará no poner nada más en el directorio principal</p>
+				</aside>
+			</section>
+
+			<section>
+				<h3>Ramas ligeras</h3>
 				<pre><code>git tag v0.0.2</code></pre>
 				<pre><code>git tag -a v0.0.2 -m "Comment"</code></pre>
 				<pre><code>git show v0.0.2</code></pre>
+
+				<aside class="notes">
+					<p>- permite guardar el estado de un respositorio en un momento determinado</p>
+					<p>- tag etiqueta el último commit, asigna una etiqueta al estado en el que estaba el repositorio tras el último commit</p>
+					<p>- -a: añade una etiqueta a una rama</p>
+				</aside>
 			</section>
 
 			<section>
 				<h3>Ramas</h3>
-				<p style="text-align:center">Ejemplo de flujo</p>
+				<p>Ejemplo de flujo: </p>
 				<pre><code>git branch NOMBRE_RAMA</code></pre>
 				<pre><code>git checkout NOMBRE_RAMA</code></pre>
-				<p style="text-align:center">Aquí se hacen cosas</p>
+				<p style="text-align: center">Aquí se hacen cosas</p>
 				<pre><code>git checkout master</code></pre>
 				<pre><code>git merge NOMBRE_RAMA</code></pre>
 				<pre><code>git branch -d NOMBRE_RAMA</code></pre>
+
+				<aside class="notes">
+					<p>- una rama es como un proyecto diferente que surge de un 
+						proyecto principal. Son caminos divergentes a partir de un tronco común, que eventualmente
+						pueden combinarse en uno sólo.
+					</p>
+
+					<p>- cada usuario trabaja con su propia rama </p>
+				</aside>
 			</section>
 
 			<section>
